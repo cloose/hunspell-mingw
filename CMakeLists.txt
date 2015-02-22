@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 project ( hunspell )
-SET(HUNSPELL_VERSION 1.3.2)
+SET(HUNSPELL_VERSION 1.3.3)
 
 set(CPACK_GENERATOR "TBZ2")
 include(CPack)
@@ -90,14 +90,18 @@ SET(PARSER_SRCS
     src/parsers/htmlparser.cxx
     src/parsers/latexparser.cxx
     src/parsers/manparser.cxx
-    src/parsers/textparser.cxx)
+    src/parsers/odfparser.cxx
+    src/parsers/textparser.cxx
+    src/parsers/xmlparser.cxx)
 
 SET(PARSER_HEADERS
     src/parsers/firstparser.hxx
     src/parsers/htmlparser.hxx
     src/parsers/manparser.hxx
+    src/parsers/odfparser.hxx
     src/parsers/latexparser.hxx
-    src/parsers/textparser.hxx)
+    src/parsers/textparser.hxx
+    src/parsers/xmlparser.hxx)
 
 # install header files
 install(FILES ${PARSER_HEADERS} DESTINATION include)
@@ -120,6 +124,7 @@ SET(MAN
     man/hunspell.1
     man/hunspell.3
     man/hunspell.4
+    man/hunspell.5
     man/hzip.1
     man/hunzip.1)
 
