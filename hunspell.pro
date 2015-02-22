@@ -43,7 +43,9 @@ SOURCES += \
     src/parsers/htmlparser.cxx \
     src/parsers/latexparser.cxx \
     src/parsers/manparser.cxx \
+    src/parsers/odfparser.cxx \
     src/parsers/textparser.cxx \
+    src/parsers/xmlparser.cxx
 
 
 HEADERS +=\
@@ -70,8 +72,10 @@ HEADERS +=\
     src/parsers/firstparser.hxx \
     src/parsers/htmlparser.hxx \
     src/parsers/manparser.hxx \
+    src/parsers/odfparser.hxx \
     src/parsers/latexparser.hxx \
     src/parsers/textparser.hxx \
+    src/parsers/xmlparser.hxx
 
 !static: {
   win32:RC_FILE = src/win_api/Hunspell.rc
